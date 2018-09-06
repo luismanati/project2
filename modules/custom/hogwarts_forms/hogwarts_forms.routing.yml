@@ -1,0 +1,11 @@
+
+hogwarts_forms.node_insert_message_form:
+  path: '/admin/config/system/node-insert'
+  defaults:
+    _form: '\Drupal\hogwarts_forms\Form\NodeInsertMessageForm'
+    _title: 'NodeInsertMessageForm'
+  requirements:
+    _permission: 'access administration pages'
+  options:
+    _admin_route: TRUE
+

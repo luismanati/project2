@@ -12,3 +12,7 @@ function hogwarts_forms_form_alter(&$form, &$form_state, $form_id){
   $form['account']['mail']['#weight'] = -11;
   $form['account']['name']['#weight'] = -12;
 }
+
+function hogwarts_forms_ENTITY_TYPE_insert($entity){
+
+}

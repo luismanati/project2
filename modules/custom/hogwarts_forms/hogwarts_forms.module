@@ -7,18 +7,8 @@
 
 use Drupal\Core\Routing\RouteMatchInterface;
 
-/**
- * Implements hook_help().
- */
-function hogwarts_forms_help($route_name, RouteMatchInterface $route_match) {
-  switch ($route_name) {
-    // Main module help for the hogwarts_forms module.
-    case 'help.page.hogwarts_forms':
-      $output = '';
-      $output .= '<h3>' . t('About') . '</h3>';
-      $output .= '<p>' . t('My Awesome Module') . '</p>';
-      return $output;
 
-    default:
-  }
+function hogwarts_forms_form_alter(&$form, &$form_state, $form_id){
+  $form['account']['mail']['#weight'] = -11;
+  $form['account']['name']['#weight'] = -12;
 }

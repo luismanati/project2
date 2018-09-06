@@ -1,0 +1,11 @@
+<?php
+/**
+ * @file
+ * Install, update and uninstall functions for Project2 profile.
+ */
+
+/**
+ * Implements hook_install().
+ */
+function project_2_install() {
+}

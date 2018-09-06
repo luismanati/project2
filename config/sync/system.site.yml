@@ -1,0 +1,14 @@
+uuid: 4fd61602-a903-4908-b0be-528441fbbfbb
+name: project_2
+mail: admin@example.com
+slogan: ''
+page:
+  403: ''
+  404: ''
+  front: /user/login
+admin_compact_mode: false
+weight_select_max: 100
+langcode: en
+default_langcode: en
+_core:
+  default_config_hash: AyT9s8OUcclfALRE_imByOMgtZ19eOlqdF6zI3p7yqo

@@ -13,6 +13,9 @@ function hogwarts_forms_form_alter(&$form, &$form_state, $form_id){
   $form['account']['name']['#weight'] = -12;
 }
 
-function hogwarts_forms_ENTITY_TYPE_insert($entity){
-
+function hogwarts_forms_node_insert($entity){
+  $config = \Drupal::service('config.factory')->getEditable('hogwarts_forms.nodeinsertmessage');
+  
+  $messenger = \Drupal::messenger();
+  $messenger->addMessage($config->get('hogwarts_forms.nodeinsertmessage'));
 }

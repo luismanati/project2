@@ -30,11 +30,14 @@ class NodeInsertMessageForm extends ConfigFormBase {
    * {@inheritdoc}
    */
   public function buildForm(array $form, FormStateInterface $form_state) {
+    $config = $this->config('hogwarts_forms.nodeinsertmessage');
+
     $form['node_insert_message'] = array(
       '#type' => 'textfield',
       '#title' => $this->t("Node Insert Message"),
+      '#default_value' => $config->get('nodeinsertmessage'),
     );
-    $config = $this->config('hogwarts_forms.nodeinsertmessage');
+    
     return parent::buildForm($form, $form_state);
   }
 
@@ -50,12 +53,10 @@ class NodeInsertMessageForm extends ConfigFormBase {
    */
   public function submitForm(array &$form, FormStateInterface $form_state) {
 
-    $this->getEditableConfigNames('hogwarts_forms.nodeinsertmessage')
-    ->set('hogwarts_forms.nodeinsertmessage', $form_state->getValue('node_insert_message'))
+    $this->config('hogwarts_forms.nodeinsertmessage')
+    ->set('nodeinsertmessage', $form_state->getValue('node_insert_message'))
     ->save();
 
     parent::submitForm($form, $form_state);
-    //$this->config('hogwarts_forms.nodeinsertmessage');
   }
-
 }

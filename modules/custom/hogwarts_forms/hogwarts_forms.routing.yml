@@ -9,3 +9,12 @@ hogwarts_forms.node_insert_message_form:
   options:
     _admin_route: TRUE
 
+
+hogwarts_forms.string_reverse_form:
+  path: '/hogwarts_forms/form/string_reverse'
+  defaults:
+    _form: '\Drupal\hogwarts_forms\Form\StringReverseForm'
+    _title: 'StringReverseForm'
+  requirements:
+    _access: 'TRUE'
+  

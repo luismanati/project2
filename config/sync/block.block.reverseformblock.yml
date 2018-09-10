@@ -1,0 +1,26 @@
+uuid: b52d2440-76c9-43a8-aeab-618d11c68a90
+langcode: en
+status: true
+dependencies:
+  module:
+    - hogwarts_forms
+    - system
+  theme:
+    - bartik
+id: reverseformblock
+theme: bartik
+region: content
+weight: 0
+provider: null
+plugin: reverse_form_block
+settings:
+  id: reverse_form_block
+  label: 'Reverse form block'
+  provider: hogwarts_forms
+  label_display: visible
+visibility:
+  request_path:
+    id: request_path
+    pages: /node
+    negate: false
+    context_mapping: {  }
